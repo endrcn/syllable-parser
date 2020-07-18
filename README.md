@@ -1,2 +1,2 @@
 # syllable-parser
-Parses words to syllables.
+Parses Turkish(for now) words to syllables.
