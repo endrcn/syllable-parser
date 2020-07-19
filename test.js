@@ -11,3 +11,4 @@ console.log("tren ->", parser.parse("tren").join("-"));
 console.log("spor ->", parser.parse("spor").join("-"));
 console.log("sporcu ->", parser.parse("sporcu").join("-"));
 console.log("makinist ->", parser.parse("makinist").join("-"));
+console.log("yayınevi ->", parser.parse("yayınevi").join("-"));
