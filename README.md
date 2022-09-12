@@ -11,4 +11,4 @@ It is a Javascript library that parses Turhish words to syllables.
 
 ## License
 
-Open sourced under the [MIT license](LICENSE).
+Open sourced under the [Apache-2.0 LICENSE](LICENSE).
