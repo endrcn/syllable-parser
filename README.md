@@ -1,6 +1,6 @@
 # syllable-parser
 
-It is a Javascript library that parses Turhish words to syllables.
+It is a Javascript library that parses Turkish words to syllables.
 
 ## Author
 
