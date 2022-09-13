@@ -1,0 +1,33 @@
+{
+  "name": "syllable-parser",
+  "version": "1.0.0",
+  "description": "A Javascript library that parses Turkish words to syllables.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/endrcn/syllable-parser.git"
+  },
+  "keywords": [
+    "syllable",
+    "turkish",
+    "syllable"
+  ],
+  "author": "Ender CAN",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/endrcn/syllable-parser/issues"
+  },
+  "homepage": "https://github.com/endrcn/syllable-parser#readme",
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "mocha": "^10.0.0",
+    "path": "^0.12.7"
+  }
+}
