@@ -45,6 +45,18 @@ describe(path.basename(__filename, '.js'), function () {
         assert.deepEqual(parser.parse("kredi"), ["kre", "di"]);
     });
 
+    it('aile', function () {
+        assert.deepEqual(parser.parse("aile"), ["a", "i", "le"]);
+    });
+
+    it('kreatif', function () {
+        assert.deepEqual(parser.parse("kreatif"), ["kre", "a", "tif"]);
+    });
+
+    it('saat', function () {
+        assert.deepEqual(parser.parse("saat"), ["sa", "at"]);
+    });
+
     it('kredi count', function () {
         assert.equal(parser.getSyllableCount("kredi"), 2);
     });
