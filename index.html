@@ -1,0 +1,63 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+
+
+    <script src="./client/SyllableParser.js"></script>
+    <script>
+        const syllableParser = new SyllableParser();
+
+        function parse() {
+            let sentence = document.getElementById("sentence").value;
+            let words = sentence.split(" ");
+            document.getElementById("result").value = "";
+            for (let i = 0; i < words.length; i++) {
+                document.getElementById("result").value += syllableParser.parse(words[i]).join("-") + " > " + syllableParser.getSyllableCount(words[i]);
+                document.getElementById("result").value += "\n";
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <a href="https://github.com/endrcn/syllable-parser" target="_blank"><img
+            style="position: absolute; top: 0; right: 0; border: 0; z-index:100;"
+            src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+
+
+    <div class="container">
+        <div class="row text-align-center">
+            <h2>Syllable Parser for Turkish</h2>
+            <hr>
+        </div>
+
+        <div class="mb-3">
+            <label for="sentence" class="form-label">Kelime Girin</label>
+            <textarea class="form-control" id="sentence" rows="3"></textarea>
+        </div>
+        <div class="mb-3">
+            <button type="submit" onclick="parse()" class="btn btn-primary pull-right">Hecele</button>
+        </div>
+
+        <div class="md-3">
+            <hr>
+        </div>
+
+        <div class="mb-3">
+            <label for="sentence" class="form-label">Sonuç</label>
+            <textarea class="form-control" id="result" rows="5" disabled></textarea>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
