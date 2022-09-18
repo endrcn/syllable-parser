@@ -28,6 +28,14 @@ console.log(syllableParser.getSyllableCount("selam"));
 // Output: 2
 ```
 
+### Unit Test Status
+
+**Total**: 15
+
+15 success
+
+![100%](https://progress-bar.dev/100)
+
 ## Author
 
 **Ender CAN**
