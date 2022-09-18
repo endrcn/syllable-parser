@@ -22,15 +22,16 @@ class SyllableParser {
 
     }
 
-    getSyllableCount(text) {
-        let syllables = this.parse(text);
+    getSyllableCount(word) {
+        let syllables = this.parse(word);
         return syllables.length;
     }
 
     parseTR(word = "") {
         let vowelRgx = /[aeıioöuüAEIİOÖUÜ]/;
         word = (word + "").split("");
-        let isThereVowel = false;
+        // let isThereVowel = false;
+        let lastVowelIndex = -1;
         let syllables = [];
         let currSyllable = "";
         for (let c = 0; c < word.length; c++) {
@@ -38,11 +39,17 @@ class SyllableParser {
                 currSyllable += word[c];
             } else { // This char is a vowel
                 currSyllable += word[c];
-                if (!isThereVowel) isThereVowel = true;
-                else {
-                    syllables.push(currSyllable.substring(0, currSyllable.length - 2));
-                    currSyllable = currSyllable.substring(currSyllable.length - 2, currSyllable.length);
+                if (lastVowelIndex >= 0) {
+                    if (c - lastVowelIndex == 1) { // two vowels followed one after the other.
+                        syllables.push(currSyllable.substring(0, currSyllable.length - (c - lastVowelIndex)));
+                        currSyllable = currSyllable.substring(currSyllable.length - (c - lastVowelIndex), currSyllable.length);
+                    } else {
+                        syllables.push(currSyllable.substring(0, currSyllable.length - 2));
+                        currSyllable = currSyllable.substring(currSyllable.length - 2, currSyllable.length);
+                    }
                 }
+                lastVowelIndex = c;
+
             }
         }
         if (currSyllable.length > 0) {
