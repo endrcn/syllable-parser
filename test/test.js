@@ -57,6 +57,10 @@ describe(path.basename(__filename, '.js'), function () {
         assert.deepEqual(parser.parse("saat"), ["sa", "at"]);
     });
 
+    it('kooperatif', function () {
+        assert.deepEqual(parser.parse("kooperatif"), ["ko", "o", "pe", "ra", "tif"]);
+    });
+
     it('kredi count', function () {
         assert.equal(parser.getSyllableCount("kredi"), 2);
     });
