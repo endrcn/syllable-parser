@@ -1,6 +1,6 @@
 {
   "name": "syllable-parser",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Javascript library that parses Turkish words to syllables.",
   "main": "index.js",
   "directories": {
