@@ -32,7 +32,7 @@ console.log(syllableParser.getSyllableCount("selam"));
 
 **Total**: 15
 
-15 success
+15 successes
 
 ![100%](https://progress-bar.dev/100)
 
